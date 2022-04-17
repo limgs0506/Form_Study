@@ -1,0 +1,150 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: larger;
+}
+
+.header_title {
+	padding: 1%;
+	padding-inline: 5%;
+	background-color: aqua;
+	font-size: 15px;
+}
+.head_nav {
+	display: flex;
+	width: 100%;
+	min-height: 2rem;
+}
+.head_nav > button {
+	flex: 1;
+	border: none;
+}
+.head_nav > button:hover {
+	border: solid 1;
+}
+
+.main_container {
+	flex: 1 0 auto;
+	padding: 0 2%;
+	background-color: dimgray;
+}
+main {
+	flex: 1 0 auto;
+	min-height: 100%;
+	padding: 0 3rem;
+	background-color: white;
+}
+main article {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	height: 100vh;
+	/* 100%는 안됨 어째서? */
+}
+main article h2 {
+	margin: 1rem auto;
+}
+
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	height: 80%;
+	width: 60%;
+	margin: auto;
+	padding: 5%;
+	background: hsl(155, 100%, 89%);
+	border-radius: 20px;
+}
+.input_con {
+	display: flex;
+	flex-direction: column;
+	width: calc(100% / 2 - 10px);
+}
+.input_con > label {
+	font-size: small;
+	font-weight: bolder;
+	color: darkgreen;
+}
+.input_con > input:not([type="radio"]) {
+	height: 50px;
+	width: 100%;
+	border-radius: 5px;
+	outline: none;
+	font-size: large;
+	padding-left: 10px;
+	border: 1px solid #ccc;
+	border-bottom-width: 2px;
+	transition: all 0.3s ease;
+}
+.input_con > input:invalid {
+	border-color: red;
+}
+.input_con > input:empty {
+	/* 
+	인풋은 원래 자식이 없다
+	좀 더 적절한 선택자가 필요
+	*/
+	border-color: #ccc;
+}
+.input_con > input:focus
+/* .input_con > input:valid  */ {
+	border-color: #9b59b6;
+}
+#password_confirm {
+}
+#gender {
+	width: 100%;
+}
+.gender_div {
+	display: flex;
+	height: 50px;
+	justify-content: space-around;
+	align-items: center;
+	font-size: medium;
+}
+.gender_input > input:checked + label {
+	font-weight: bold;
+}
+#textarea {
+	width: 100%;
+}
+#textarea > textarea {
+	padding: 5px;
+	resize: none;
+}
+.submit_con {
+	display: flex;
+	width: 100%;
+	align-items: flex-end;
+}
+.submit_input {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	background-color: coral;
+	border-radius: 5px;
+	font-size: large;
+}
+.submit_input:hover {
+	background-color: chartreuse;
+}
+.submit_input:active {
+	background-color: crimson;
+}
+
+footer {
+	background-color: lightslategray;
+	padding: 1rem;
+}

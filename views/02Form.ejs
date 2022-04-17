@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="kr">
+	<head>
+		<!-- style/css.css랑 /style/css.css는 다름. 뭐가? -->
+		<link rel="stylesheet" href="/style/css.css" />
+		<title>Form</title>
+	</head>
+	<body>
+		<header class="header_container">
+			<div class="header_title">
+				<h1><%= title %></h1>
+			</div>
+			<nav class="head_nav">
+				<button>1</button>
+				<button>2</button>
+				<button>3</button>
+				<button>4</button>
+				<button>5</button>
+			</nav>
+		</header>
+
+		<div class="main_container">
+			<main>
+				<article>
+					<h2>회원가입 폼</h2>
+					<a href="sss">index</a>
+					<form action="result" method="post" class="form">
+						<div class="input_con">
+							<label for="id"> 아이디 </label>
+							<input type="text" name="id" placeholder="xx@email.com" />
+						</div>
+						<div class="input_con">
+							<label for="name"> 이름 </label>
+							<input type="text" name="name" />
+						</div>
+						<div class="input_con">
+							<label for="pw"> 비밀번호 </label>
+							<input
+								type="password"
+								name="pw"
+								placeholder="영문, 숫자 포함 8~16자"
+								id="password"
+							/>
+						</div>
+						<div class="input_con">
+							<label for="password"> 비밀번호 확인</label>
+							<input type="password" name="pass_con" id="password_confirm" />
+						</div>
+						<div class="input_con">
+							<label for="birth"> 출생연도 </label>
+							<input type="date" name="birth" />
+						</div>
+						<div class="input_con">
+							<label for="adress"> 주소 </label>
+							<input type="text" name="adress" />
+						</div>
+						<div class="input_con" id="gender">
+							<label for="gender"> 성별 </label>
+							<div class="gender_div">
+								<div class="gender_input">
+									<input type="radio" name="gender" value="male" id="male" />
+									<label for="male">male</label>
+								</div>
+								<div class="gender_input">
+									<input
+										type="radio"
+										name="gender"
+										value="female"
+										id="female"
+									/>
+									<label for="female">female</label>
+								</div>
+								<div class="gender_input">
+									<input type="radio" name="gender" value="etc" id="etc" />
+									<label for="etc">etc</label>
+								</div>
+							</div>
+						</div>
+						<div class="input_con" id="textarea">
+							<label for="bio"> 자기소개 </label>
+							<textarea name="bio" rows="5"> </textarea>
+						</div>
+						<div class="submit_con">
+							<input class="submit_input" type="submit" value="회원가입" />
+						</div>
+					</form>
+				</article>
+			</main>
+		</div>
+
+		<footer>
+			<abbr> 푸터 </abbr>
+		</footer>
+	</body>
+</html>
