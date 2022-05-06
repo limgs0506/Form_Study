@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const cors = require("cors");
 const app = express();
 
 //router 동작 원리 찾아보기
@@ -11,6 +12,7 @@ const PORT = 3001;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(cors());
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
