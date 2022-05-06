@@ -8,10 +8,19 @@ router.get("/", (req, res) => {
 	res.render("02result.ejs", { id: id, pw: pw });
 });
 router.post("/", (req, res) => {
-	console.log("body: ", req.body);
-	const id = req.body.id;
-	const pw = req.body.pw;
-	res.render("02result.ejs", { id: id, pw: pw });
+	//posr req.body 사용에 use(express.json()) 필요
+	const { id, pw, pwcf, name, birth, adress, gender, bio } = req.body;
+
+	res.json({
+		id: id,
+		pw: pw,
+		pwcf: pwcf,
+		name: name,
+		birth: birth,
+		adress: adress,
+		gender: gender,
+		bio: bio,
+	});
 });
 
 module.exports = router;
